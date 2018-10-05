@@ -188,5 +188,5 @@ class HTTPRequester {
         \curl_close($ch);
         return $response;
     }
-    
+
 }

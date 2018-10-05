@@ -162,19 +162,6 @@ Gives you the distance between two zip codes
 
 ## Example
 ```php
-# import module  
-# In this example the directory SnoopiClient exists in the root of the project
-from SnoopiClient import SnoopiClient
-
-# instantiate the SDK
-# optional parameter is a String containing the api key
-my_api = SnoopiClient("12345abcde")
-
-# get list of zip codes within 5 miles of origin zip code
-result = my_api.get_zip_code_radius("11214", "5")
-print(result)
-
-
 <?php
 //import module
 require __DIR__.'/SnoopiClient.php';
