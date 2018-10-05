@@ -128,16 +128,8 @@ class HTTPRequester {
         $headers_arr = explode("\r\n", $headers);
         $headers_arr = array_filter($headers_arr);
 
-
-
-        //$http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-        //[$headers, $body] = explode("\r\n\r\n", $http_response, 2);
         $http_status_code = explode(" ", $headers_arr[0])[1];
-        //print_r("original_response: " . $http_response);
-        //$headers2 = $this->get_headers_from_curl_response($response);
 
-        //$response->headers = $headers2;
         $response = (object) array('body' => json_encode($body), 'headers' => $headers_arr, 'http_status_code' => $http_status_code);
 
         return $response;
